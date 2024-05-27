@@ -46,7 +46,7 @@ curl --location 'http://localhost:3000/personas/crearpersona' \
     "gender": "M",
     "email": "cristian.mazza@mail.com",
     "password": "12345",
-    "active": "1"
+    "active": "true"
 }'
 ```
 #### Otros Endpoints:
