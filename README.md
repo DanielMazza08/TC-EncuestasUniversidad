@@ -26,10 +26,9 @@
 
 1. Crear una o más personas.
 2. Crear una encuesta.
-3. Crear la pregunta 1 y sus opciones.
-4. Crear la pregunta 2 y sus opciones.
-5. Registrar respuestas de una persona a varias preguntas a la vez.
-6. Generar reportes utilizando las funciones del respuestasController.
+3. Crear una pregunta y sus opciones. Podemos varias preguntas con varias opciones en cada una, no hay limite
+4. Registrar respuestas de una persona a varias preguntas a la vez.
+5. Generar reportes utilizando las funciones del respuestasController.
 
 --------
 
