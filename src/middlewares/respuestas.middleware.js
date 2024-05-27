@@ -10,30 +10,29 @@ const validarCamposExistentes = async (req, res, next) => {
         return res.status(400).json({ error: 'El body de la consulta debe ser un array de datos (bulkCreate).' });
     }
 
+    const modelos = {
+        persona: modeloPersonReportData,
+        encuesta: modeloSurveys,
+        pregunta: modeloSurveysQuestions,
+        opcion: modeloSurveysOptions
+    };
+
     for (const item of data) {
-        const { person_id, survey_id, question_id, option_id } = item;
+        const errores = [];
 
-        const [person, survey, question, option] = await Promise.all([
-            person_id ? modeloPersonReportData.findOne({ where: { id: person_id } }) : Promise.resolve(null),
-            survey_id ? modeloSurveys.findOne({ where: { id: survey_id } }) : Promise.resolve(null),
-            question_id ? modeloSurveysQuestions.findOne({ where: { id: question_id } }) : Promise.resolve(null),
-            option_id ? modeloSurveysOptions.findOne({ where: { id: option_id } }) : Promise.resolve(null)
-        ]);
+        for (const key in modelos) {
+            const { [key + '_id']: id } = item;
 
-        if (person_id && !person) {
-            return res.status(400).json({ error: `No existe persona con el Person ID: ${person_id}.` });
+            if (id) {
+                const registro = await modelos[key].findOne({ where: { id } });
+                if (!registro) {
+                    errores.push(`No existe ${key} con el ID: ${id}.`);
+                }
+            }
         }
 
-        if (survey_id && !survey) {
-            return res.status(400).json({ error: `No existe encuesta con el Survey ID: ${survey_id}.` });
-        }
-
-        if (question_id && !question) {
-            return res.status(400).json({ error: `No existe pregunta con el Question ID: ${question_id}.` });
-        }
-
-        if (option_id && !option) {
-            return res.status(400).json({ error: `No existe opción con el Option ID: ${option_id}.` });
+        if (errores.length > 0) {
+            return res.status(400).json({ error: errores.join(' ') });
         }
     }
 
@@ -84,4 +83,25 @@ const existePersonaPorId = async (req, res, next) => {
     }
 };
 
-module.exports = { validarCamposExistentes, validarIdsExistentes, existePersonaPorId };
+const validarActivoPersonaEncuesta = async (req, res, next) => {
+    const data = req.body;
+    try {
+      for (const item of data) { // Recorro en el array que le mando en la consulta ya que es un bulkCreate
+        const { person_id, survey_id } = item;
+
+        const person = await modeloPersonReportData.findByPk(person_id);
+        if (!person.active) { // Verifico si la persona está activa
+          return res.status(404).json({ error: `La persona con ID ${person_id} no está activa.` });
+        }
+        const survey = await modeloSurveys.findByPk(survey_id);
+        if (!survey.active) { // Verificar si la encuesta está activa
+          return res.status(404).json({ error: `La encuesta con ID ${survey_id} no está activa.` });
+        }
+      }
+      next();
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+  };
+
+module.exports = { validarCamposExistentes, validarIdsExistentes, existePersonaPorId, validarActivoPersonaEncuesta };
