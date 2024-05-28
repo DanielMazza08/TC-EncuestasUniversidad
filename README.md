@@ -67,7 +67,7 @@ curl --location 'http://localhost:3000/encuestas/crearencuestas' \
 ```
 #### Otros Endpoints:
 * Mostrar encuestas: http://localhost:3000/encuestas/mostrarencuestas
-* Editar encuestas: http://localhost:3000/encuestas/editarencuestas
+* Editar encuestas: http://localhost:3000/encuestas/editarencuestas/:id
 * Eliminar encuestas por ID: http://localhost:3000/encuestas/eliminarencuestas/:id
 * Mostrar encuestas con preguntas: http://localhost:3000/encuestas/mostrarencuestasconpreguntas
 * Mostrar encuestas con preguntas y opciones: http://localhost:3000/encuestas/mostrarencuestasconpreguntasyopciones
@@ -77,7 +77,6 @@ curl --location 'http://localhost:3000/encuestas/crearencuestas' \
 #### Crear Preguntas
 ##### Pregunta 1
 ```bash
-Copiar código
 curl --location 'http://localhost:3000/preguntas/crearpreguntas' \
 --header 'Content-Type: application/json' \
 --data '{
@@ -134,7 +133,6 @@ curl --location --request POST 'http://localhost:3000/opciones/crearopciones' \
         "question_id": "2"
     }
 ]'
-
 ```
 #### Otros Endpoints:
 
@@ -170,11 +168,9 @@ http://localhost:3000/respuestas/mostrarresultados/1
 ```
 #### Mostrar Personas que Respondieron una Encuesta Específica
 ```bash
-[http://localhost:3000/respuestas/mostrarresultados/1](http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1
-)
+http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1
 ```
 #### Mostrar Cantidad de Veces que se Eligió una Opción de una Encuesta y Pregunta Específica
 ```bash
-[http://localhost:3000/respuestas/mostrarresultados/1](http://localhost:3000/respuestas/mostrarcantidaddevecesqueseeligioopcion/1/1/2
-)
+http://localhost:3000/respuestas/mostrarcantidaddevecesqueseeligioopcion/1/1/2
 ```

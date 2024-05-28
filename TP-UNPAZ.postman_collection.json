@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "26d01552-db46-4134-a6d2-c2260e3d33c8",
+		"name": "TP-UNPAZ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35124808"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Alta-Persona",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\": \"38827034\",\r\n    \"firstname\": \"Cristian\",\r\n    \"lastname\": \"Mazza\",\r\n    \"gender\": \"M\",\r\n    \"email\": \"cristian.mazza@mail.com\",\r\n    \"password\": \"12345678\",\r\n    \"active\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/personas/crearpersona",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								"crearpersona"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Persona por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/personas/mostrarpersonasporid/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								"mostrarpersonasporid",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Personas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/personas/mostrarpersonas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								"mostrarpersonas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar-Personas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/personas/editarpersona/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								"editarpersona",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Persona",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/personas/eliminarpersona/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"personas",
+								"eliminarpersona",
+								"8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Encuestas",
+			"item": [
+				{
+					"name": "Alta-Encuesta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"survey_name\": \"Encuesta de conformidad\",\r\n    \"active\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/encuestas/crearencuestas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"crearencuestas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Encuestas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/encuestas/mostrarencuestas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"mostrarencuestas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar-Encuesta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/encuestas/editarencuestas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"editarencuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Encuesta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/encuestas/eliminarencuestas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"eliminarencuestas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Encuestas con preguntas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/encuestas/mostrarencuestasconpreguntas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"mostrarencuestasconpreguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Encuestas, Preguntas y Opciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/encuestas/mostrarencuestasconpreguntasyopciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"encuestas",
+								"mostrarencuestasconpreguntasyopciones"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Preguntas",
+			"item": [
+				{
+					"name": "Alta-Pregunta 1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"survey_id\": \"1\",\n    \"question_code\": \"P1\",\n    \"question_title\": \"¿Estás conforme con la carrera que elegiste?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/preguntas/crearpreguntas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"crearpreguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Alta-Pregunta 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"survey_id\": \"1\",\n    \"question_code\": \"P2\",\n    \"question_title\": \"¿Por qué elegiste esta carrera?\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/preguntas/crearpreguntas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"crearpreguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Preguntas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/preguntas/mostrarpreguntas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"mostrarpreguntas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Preguntas y Opciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/preguntas/mostrarpreguntasconopciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"mostrarpreguntasconopciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar-Pregunta por ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/preguntas/editarpreguntas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"editarpreguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Pregunta Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/preguntas/eliminarpreguntas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"preguntas",
+								"eliminarpreguntas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Opciones",
+			"item": [
+				{
+					"name": "Alta-Opciones P1",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"label_option\": \"Muy conforme\",\n        \"question_id\": \"1\"\n    },\n    {\n        \"label_option\": \"Poco conforme\",\n        \"question_id\": \"1\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/opciones/crearopciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"crearopciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear-Opciones P2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"label_option\": \"Me la recomendaron\",\n        \"question_id\": \"2\"\n    },\n    {\n        \"label_option\": \"Era la única que me interesaba\",\n        \"question_id\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/opciones/crearopciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"crearopciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Opciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/opciones/mostraropciones",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"mostraropciones"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar-Opciones P1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/opciones/editaropciones/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"editaropciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar-Opciones P2",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/opciones/editaropciones/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"editaropciones",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Opciones Por ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/opciones/eliminaropciones/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"opciones",
+								"eliminaropciones",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Respuestas",
+			"item": [
+				{
+					"name": "Responder-Preguntas 1 y 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"person_id\": \"1\",\n        \"survey_id\": \"1\",\n        \"question_id\": \"1\",\n        \"option_id\": \"2\"\n    },\n    {\n        \"person_id\": \"1\",\n        \"survey_id\": \"1\",\n        \"question_id\": \"2\",\n        \"option_id\": \"2\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/respuestas/realizarencuesta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"respuestas",
+								"realizarencuesta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Resultados por Persona ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/respuestas/mostrarresultados/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"respuestas",
+								"mostrarresultados",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Resultados por Encuesta ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"respuestas",
+								"mostrarPersonasquerespondieronencuesta",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar-Veces que se eligio opcion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/respuestas/mostrarcantidaddevecesqueseeligioopcion/1/1/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"respuestas",
+								"mostrarcantidaddevecesqueseeligioopcion",
+								"1",
+								"1",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
