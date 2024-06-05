@@ -669,7 +669,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/respuestas/mostrarcantidaddevecesqueseeligioopcion/1/1/2",
+							"raw": "http://localhost:3000/respuestas/vecesqueeligioopcion/1/1/2",
 							"protocol": "http",
 							"host": [
 								"localhost"

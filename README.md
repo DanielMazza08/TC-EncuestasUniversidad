@@ -172,5 +172,5 @@ http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1
 ```
 #### Mostrar Cantidad de Veces que se Eligió una Opción de una Encuesta y Pregunta Específica
 ```bash
-http://localhost:3000/respuestas/mostrarcantidaddevecesqueseeligioopcion/1/1/2
+http://localhost:3000/respuestas/vecesqueeligioopcion/1/1/2
 ```
