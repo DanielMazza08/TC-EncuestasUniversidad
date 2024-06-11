@@ -174,3 +174,12 @@ http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1
 ```bash
 http://localhost:3000/respuestas/vecesqueeligioopcion/1/1/2
 ```
+--------
+### Para el frontend
+
+Pegar esta ruta en la barra de direciones del navegador: http://localhost:3000
+En caso de tener problemas con el front correr este comando antes del npm run dev: **npm install -g http-server**
+
+Para este frontend basico que armamos se van a poder dar de alta personas nuevas y luego mostrar todas la que existen en una tabla.
+
+![Formulario+Tabla - Usuarios](Formulario+Tabla%20-%20Usuarios.png)
