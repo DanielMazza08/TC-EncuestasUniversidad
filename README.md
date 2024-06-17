@@ -89,11 +89,18 @@ curl --location 'http://localhost:3000/preguntas/crearpreguntas' \
 ```bash
 curl --location 'http://localhost:3000/preguntas/crearpreguntas' \
 --header 'Content-Type: application/json' \
---data '{
-    "survey_id": "1",
-    "question_code": "P2",
-    "question_title": "¿Por qué elegiste esta carrera?"
-}'
+--data-raw '[
+    {
+        "survey_id": "1",
+        "question_code": "P1",
+        "question_title": "¿Estás conforme con la carrera que elegiste?"
+    },
+    {
+        "survey_id": "1",
+        "question_code": "P2",
+        "question_title": "¿Por qué elegiste esta carrera?"
+    }
+]'
 ```
 #### Otros Endpoints:
 

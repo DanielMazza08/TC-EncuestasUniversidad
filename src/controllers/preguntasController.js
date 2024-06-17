@@ -6,7 +6,7 @@ const modeloSurveysOptions = require('../db/models').survey_options;
 // Controlador para crear una pregunta
 exports.crearPregunta = async (req, res) => {
     try {
-        const data = await modeloSurveysQuestions.create(req.body);
+        const data = await modeloSurveysQuestions.bulkCreate(req.body);
         res.status(201).json({ datos: data });
     } 
     catch (error) {

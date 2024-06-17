@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "26d01552-db46-4134-a6d2-c2260e3d33c8",
 		"name": "TP-UNPAZ",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "35124808"
 	},
 	"item": [
@@ -28,18 +28,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/personas/crearpersona",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"personas",
-								"crearpersona"
-							]
-						}
+						"url": "http://localhost:3000/personas/crearpersona"
 					},
 					"response": []
 				},
@@ -48,19 +37,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/personas/mostrarpersonasporid/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"personas",
-								"mostrarpersonasporid",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/personas/mostrarpersonasporid/1"
 					},
 					"response": []
 				},
@@ -69,18 +46,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/personas/mostrarpersonas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"personas",
-								"mostrarpersonas"
-							]
-						}
+						"url": "http://localhost:3000/personas/mostrarpersonas"
 					},
 					"response": []
 				},
@@ -89,19 +55,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/personas/editarpersona/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"personas",
-								"editarpersona",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/personas/editarpersona/1"
 					},
 					"response": []
 				},
@@ -110,19 +64,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/personas/eliminarpersona/8",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"personas",
-								"eliminarpersona",
-								"8"
-							]
-						}
+						"url": "http://localhost:3000/personas/eliminarpersona/8"
 					},
 					"response": []
 				}
@@ -150,18 +92,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/encuestas/crearencuestas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"crearencuestas"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/crearencuestas"
 					},
 					"response": []
 				},
@@ -170,18 +101,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/encuestas/mostrarencuestas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"mostrarencuestas"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/mostrarencuestas"
 					},
 					"response": []
 				},
@@ -190,19 +110,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/encuestas/editarencuestas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"editarencuestas",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/editarencuestas/1"
 					},
 					"response": []
 				},
@@ -211,19 +119,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/encuestas/eliminarencuestas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"eliminarencuestas",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/eliminarencuestas/1"
 					},
 					"response": []
 				},
@@ -232,18 +128,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/encuestas/mostrarencuestasconpreguntas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"mostrarencuestasconpreguntas"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/mostrarencuestasconpreguntas"
 					},
 					"response": []
 				},
@@ -252,18 +137,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/encuestas/mostrarencuestasconpreguntasyopciones",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"encuestas",
-								"mostrarencuestasconpreguntasyopciones"
-							]
-						}
+						"url": "http://localhost:3000/encuestas/mostrarencuestasconpreguntasyopciones"
 					},
 					"response": []
 				}
@@ -273,7 +147,7 @@
 			"name": "Preguntas",
 			"item": [
 				{
-					"name": "Alta-Pregunta 1",
+					"name": "Alta-Preguntas",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -284,59 +158,14 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"survey_id\": \"1\",\n    \"question_code\": \"P1\",\n    \"question_title\": \"¿Estás conforme con la carrera que elegiste?\"\n}",
+							"raw": "[\n    {\n    \"survey_id\": \"1\",\n    \"question_code\": \"P1\",\n    \"question_title\": \"¿Estás conforme con la carrera que elegiste?\"\n    },\n    {\n    \"survey_id\": \"1\",\n    \"question_code\": \"P2\",\n    \"question_title\": \"¿Por qué elegiste esta carrera?\"\n    }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/preguntas/crearpreguntas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"crearpreguntas"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Alta-Pregunta 2",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"survey_id\": \"1\",\n    \"question_code\": \"P2\",\n    \"question_title\": \"¿Por qué elegiste esta carrera?\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/preguntas/crearpreguntas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"crearpreguntas"
-							]
-						}
+						"url": "http://localhost:3000/preguntas/crearpreguntas"
 					},
 					"response": []
 				},
@@ -345,18 +174,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/preguntas/mostrarpreguntas",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"mostrarpreguntas"
-							]
-						}
+						"url": "http://localhost:3000/preguntas/mostrarpreguntas"
 					},
 					"response": []
 				},
@@ -365,18 +183,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/preguntas/mostrarpreguntasconopciones",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"mostrarpreguntasconopciones"
-							]
-						}
+						"url": "http://localhost:3000/preguntas/mostrarpreguntasconopciones"
 					},
 					"response": []
 				},
@@ -385,19 +192,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/preguntas/editarpreguntas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"editarpreguntas",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/preguntas/editarpreguntas/1"
 					},
 					"response": []
 				},
@@ -406,19 +201,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/preguntas/eliminarpreguntas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"preguntas",
-								"eliminarpreguntas",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/preguntas/eliminarpreguntas/1"
 					},
 					"response": []
 				}
@@ -446,18 +229,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/opciones/crearopciones",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"crearopciones"
-							]
-						}
+						"url": "http://localhost:3000/opciones/crearopciones"
 					},
 					"response": []
 				},
@@ -480,18 +252,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/opciones/crearopciones",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"crearopciones"
-							]
-						}
+						"url": "http://localhost:3000/opciones/crearopciones"
 					},
 					"response": []
 				},
@@ -500,18 +261,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/opciones/mostraropciones",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"mostraropciones"
-							]
-						}
+						"url": "http://localhost:3000/opciones/mostraropciones"
 					},
 					"response": []
 				},
@@ -524,19 +274,7 @@
 							"mode": "urlencoded",
 							"urlencoded": []
 						},
-						"url": {
-							"raw": "http://localhost:3000/opciones/editaropciones/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"editaropciones",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/opciones/editaropciones/1"
 					},
 					"response": []
 				},
@@ -545,19 +283,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/opciones/editaropciones/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"editaropciones",
-								"2"
-							]
-						}
+						"url": "http://localhost:3000/opciones/editaropciones/2"
 					},
 					"response": []
 				},
@@ -566,19 +292,7 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/opciones/eliminaropciones/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"opciones",
-								"eliminaropciones",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/opciones/eliminaropciones/1"
 					},
 					"response": []
 				}
@@ -588,7 +302,7 @@
 			"name": "Respuestas",
 			"item": [
 				{
-					"name": "Responder-Preguntas 1 y 2",
+					"name": "Responder-Preguntas 1 , 2,  etc",
 					"request": {
 						"method": "POST",
 						"header": [
@@ -606,18 +320,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3000/respuestas/realizarencuesta",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"respuestas",
-								"realizarencuesta"
-							]
-						}
+						"url": "http://localhost:3000/respuestas/realizarencuesta"
 					},
 					"response": []
 				},
@@ -626,19 +329,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/respuestas/mostrarresultados/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"respuestas",
-								"mostrarresultados",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/respuestas/mostrarresultados/1"
 					},
 					"response": []
 				},
@@ -647,19 +338,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"respuestas",
-								"mostrarPersonasquerespondieronencuesta",
-								"1"
-							]
-						}
+						"url": "http://localhost:3000/respuestas/mostrarPersonasquerespondieronencuesta/1"
 					},
 					"response": []
 				},
@@ -668,21 +347,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/respuestas/vecesqueeligioopcion/1/1/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"respuestas",
-								"mostrarcantidaddevecesqueseeligioopcion",
-								"1",
-								"1",
-								"2"
-							]
-						}
+						"url": "http://localhost:3000/respuestas/vecesqueeligioopcion/1/1/2"
 					},
 					"response": []
 				}

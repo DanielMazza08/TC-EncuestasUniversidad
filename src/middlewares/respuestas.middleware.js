@@ -3,44 +3,8 @@ const modeloSurveys = require('../db/models').surveys;
 const modeloSurveysQuestions = require('../db/models').survey_questions;
 const modeloSurveysOptions = require('../db/models').survey_options;
 
-/* const validarCamposExistentes = async (req, res, next) => {
-    const data = req.body;
-
-    if (!Array.isArray(data) || data.length === 0) {
-        return res.status(400).json({ error: 'El body de la consulta debe ser un array de datos (bulkCreate).' });
-    }
-
-    const modelos = {
-        persona: modeloPersonReportData,
-        encuesta: modeloSurveys,
-        pregunta: modeloSurveysQuestions,
-        opcion: modeloSurveysOptions
-    };
-
-    for (const item of data) {
-        const errores = [];
-
-        for (const key in modelos) {
-            const { [key + '_id']: id } = item;
-
-            if (id) {
-                const registro = await modelos[key].findOne({ where: { id } });
-                if (!registro) {
-                    errores.push(`No existe ${key} con el ID: ${id}.`);
-                }
-            }
-        }
-
-        if (errores.length > 0) {
-            return res.status(400).json({ error: errores.join(' ') });
-        }
-    }
-
-    next();
-}; */
-
 const validarEncuestaExistente = async (req, res, next) => {
-    const { surveyId } = req.params;
+    const surveyId = req.params.surveyId || req.body.surveyId;
 
     try {
         if (surveyId) {
@@ -56,7 +20,7 @@ const validarEncuestaExistente = async (req, res, next) => {
 };
 
 const validarPreguntaExistente = async (req, res, next) => {
-    const { questionId } = req.params;
+    const questionId = req.params.questionId || req.body.optionId;
 
     try {
         if (questionId) {
@@ -72,7 +36,7 @@ const validarPreguntaExistente = async (req, res, next) => {
 };
 
 const validarOpcionExistente = async (req, res, next) => {
-    const { optionId } = req.params;
+    const optionId = req.params.optionId||req.body.optionId;
 
     try {
         if (optionId) {
@@ -88,19 +52,20 @@ const validarOpcionExistente = async (req, res, next) => {
 };
 
 const existePersonaPorId = async (req, res, next) => {
-    const { personId } = req.params;
+    const personId = req.body.personId || req.params.personId;
     try {
         if (personId) {
-            const person = await modeloPersonReportData.findByPk(personId);
-            if (!person) {
-                return res.status(400).json({ error: `No existe persona con el ID: ${personId}.` });
-            }
+        const person = await modeloPersonReportData.findByPk(personId);
+        if (!person) {
+            return res.status(400).json({ error: `No existe persona con el ID: ${personId}.` });
+        }
         }
         next();
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 const validarPersonaActiva = async (req, res, next) => {
     const data = req.body;
