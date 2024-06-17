@@ -9,7 +9,10 @@ router.post('/realizarencuesta', schemaMiddleware(respuestaSchema), respuestasMi
 router.get('/mostrarresultados/:personId', respuestasMiddleware.existePersonaPorId, respuestasController.mostrarResultadosEncuestas);
 router.get('/mostrarpersonasquerespondieron', respuestasController.mostrarPersonasQueRespondieron);
 router.get('/mostrarPersonasquerespondieronencuesta/:surveyId', respuestasMiddleware.validarEncuestaExistente, respuestasController.mostrarPersonasQueRespondieronEncuesta);
-router.get('/vecesqueeligioopcion/:surveyId/:questionId/:optionId', respuestasMiddleware.validarEncuestaActiva, respuestasMiddleware.validarEncuestaExistente,
-respuestasMiddleware.validarPreguntaExistente, respuestasMiddleware.validarOpcionExistente , respuestasController.mostrarCantidadDeVecesQueSeEligioOpcion);
-
+router.get('/vecesqueeligioopcion/:surveyId/:questionId/:optionId',
+    respuestasMiddleware.validarEncuestaExistente,
+    respuestasMiddleware.validarPreguntaExistente,
+    respuestasMiddleware.validarOpcionExistente,
+    respuestasController.mostrarCantidadDeVecesQueSeEligioOpcion
+);
 module.exports = router;

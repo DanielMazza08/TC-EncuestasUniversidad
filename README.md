@@ -75,17 +75,8 @@ curl --location 'http://localhost:3000/encuestas/crearencuestas' \
 --------
 
 #### Crear Preguntas
-##### Pregunta 1
-```bash
-curl --location 'http://localhost:3000/preguntas/crearpreguntas' \
---header 'Content-Type: application/json' \
---data '{
-    "survey_id": "1",
-    "question_code": "P1",
-    "question_title": "¿Estás conforme con la carrera que elegiste?"
-}'
-```
-##### Pregunta 2
+
+##### Pregunta 1 y 2
 ```bash
 curl --location 'http://localhost:3000/preguntas/crearpreguntas' \
 --header 'Content-Type: application/json' \

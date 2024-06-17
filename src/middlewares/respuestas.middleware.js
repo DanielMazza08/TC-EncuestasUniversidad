@@ -5,7 +5,6 @@ const modeloSurveysOptions = require('../db/models').survey_options;
 
 const validarEncuestaExistente = async (req, res, next) => {
     const surveyId = req.params.surveyId || req.body.surveyId;
-
     try {
         if (surveyId) {
             const survey = await modeloSurveys.findByPk(surveyId);
@@ -20,8 +19,7 @@ const validarEncuestaExistente = async (req, res, next) => {
 };
 
 const validarPreguntaExistente = async (req, res, next) => {
-    const questionId = req.params.questionId || req.body.optionId;
-
+    const questionId = req.params.questionId || req.body.questionId;
     try {
         if (questionId) {
             const question = await modeloSurveysQuestions.findByPk(questionId);
@@ -36,8 +34,7 @@ const validarPreguntaExistente = async (req, res, next) => {
 };
 
 const validarOpcionExistente = async (req, res, next) => {
-    const optionId = req.params.optionId||req.body.optionId;
-
+    const optionId = req.params.optionId || req.body.optionId;
     try {
         if (optionId) {
             const option = await modeloSurveysOptions.findByPk(optionId);
@@ -50,6 +47,7 @@ const validarOpcionExistente = async (req, res, next) => {
         res.status(500).json({ error: error.message });
     }
 };
+
 
 const existePersonaPorId = async (req, res, next) => {
     const personId = req.body.personId || req.params.personId;
