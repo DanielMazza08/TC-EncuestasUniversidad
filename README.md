@@ -1,5 +1,7 @@
 # Sistema de Encuestas
 
+Inegrantes: Cristian Mazza, Gonzalo Cabral
+
 ## Introducción
 
 El propósito de este documento es proporcionar una visión general del sistema de encuestas diseñado para la Universidad, que permitirá la creación, gestión y realización de encuestas El sistema está diseñado para ser utilizado por personas que podran registrase en la plataforma para responder las encuestas
