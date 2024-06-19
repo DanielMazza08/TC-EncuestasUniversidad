@@ -33,7 +33,11 @@ document.getElementById('crearUsuarioForm').addEventListener('submit', async (e)
             document.getElementById('crearUsuarioForm').reset();
         } else {
             const errorData = await response.json();
-            alert(`Error: ${errorData.error}`);
+            if (Array.isArray(errorData.errors)) {
+                alert(`Error: ${errorData.errors.join('\n')}`);
+            } else {
+                alert(`Error: ${errorData.error || 'Ocurrió un error inesperado'}`);
+            }
         }
     } catch (error) {
         alert(`Error: ${error.message}`);
@@ -52,7 +56,7 @@ document.getElementById('mostrarUsuariosBtn').addEventListener('click', async ()
         if (response.ok) {
             const data = await response.json();
             const usuariosTableBody = document.querySelector('#usuariosTable tbody');
-            usuariosTableBody.innerHTML = ''; // Limpiar la tabla antes de mostrar los usuarios
+            usuariosTableBody.innerHTML = ''; // Limpia la tabla antes de mostrar los usuarios
 
             data.datos.forEach(usuario => {
                 const row = document.createElement('tr');
@@ -72,5 +76,15 @@ document.getElementById('mostrarUsuariosBtn').addEventListener('click', async ()
         }
     } catch (error) {
         alert(`Error: ${error.message}`);
+    }
+});
+
+// Añadir funcionalidad para mostrar/ocultar contraseña
+document.getElementById('showPassword').addEventListener('change', function() {
+    var passwordField = document.getElementById('password');
+    if (this.checked) {
+        passwordField.type = 'text';
+    } else {
+        passwordField.type = 'password';
     }
 });
