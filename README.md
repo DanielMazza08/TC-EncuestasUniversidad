@@ -65,4 +65,4 @@ Para este frontend basico que armamos se van a poder dar de alta personas nuevas
 *En caso de tener problemas con el front correr este comando antes del npm run dev: **npm install -g http-server***
 3. Dar de alta alguna persona
 4. Tocar en mostrar usuarios para ver el que dimos de alta y los que ya existieran de antes.
-![Formulario+Tabla - Usuarios](/images/Formulario+Tabla%20-%20Usuarios.jpg)
+![Formulario+Tabla - Usuarios](/images/tabla%20usuarios.png)
